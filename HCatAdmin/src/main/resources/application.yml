@@ -1,0 +1,22 @@
+#tomcat
+server:
+  #tomcat运行端口
+  port: 8017
+  #程序部署根路径
+  context-path: /hcat
+  tomcat:
+    max-threads: 1000
+    max-connections: 20000
+spring:
+  application:
+    name: HCat
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    cache: false
+  devtools:
+    restart:
+      enabled: true
+  mvc:
+    static-path-pattern: classpath:/static/**
